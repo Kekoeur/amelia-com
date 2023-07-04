@@ -5,7 +5,7 @@ import Article from "../../components/Article";
 import "./Homepage.scss"
 
 const Homepage = () => {
-    const IMG_PATH = "/assets/";
+    const IMG_PATH = process.env.PUBLIC_URL + "/assets/";
     const main = home_data.main;
     const sub = home_data.sub;
     const last = home_data.last;
