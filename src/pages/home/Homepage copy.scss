@@ -1,0 +1,182 @@
+.overlay {
+    background-color: rgba($color: #ffffff, $alpha: 0.4);
+    box-shadow: 0 10px 35px -10px rgba(0, 255, 38, 0.5);
+    width: fit-content;
+    transform: skew(-30deg);
+    * {
+        transform: skew(30deg);
+        margin: 30px;
+        color: black;
+    }
+}
+
+.main {
+    &__img {
+    width: 100%;
+    height: calc(100vh - 50px);
+    overflow: hidden;
+    background-image: var(--main_background);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    }
+    .overlay {
+        transform: skew(-30deg);
+        padding-left: 400px;
+        position: relative;
+        left: -300px;
+        * {
+            transform: skew(30deg);
+            margin: 30px;
+            color: black;
+            @media (max-width: 800px) {
+                transform: skew(10deg);
+            }
+        }
+        h1 {
+            font-size: 5rem;
+            font-weight: 900;
+            @media (max-width: 800px) {
+                font-size: 4rem;
+            }
+            @media (max-width: 665px) {
+                font-size: 3rem;
+            }
+            @media (max-width: 400px) {
+                font-size: 2rem;
+            }
+        }
+        h2 {
+            text-align: center;
+            @media (max-width: 400px) {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 1440px) {
+            padding-left: 340px;
+            max-width: 50%;
+        }
+        @media (max-width: 800px) {
+            transform: skew(-10deg);
+        }
+        @media (max-width: 600px) {
+            padding-left: 100px;
+            left: -100px;
+            max-width: 65%;
+        }
+    }
+  }
+}
+
+article {
+    box-shadow: 0 10px 35px -10px rgba(0, 255, 38, 0.5);
+    margin: 100px auto;
+    padding: 50px;
+    width: fit-content;
+    height: fit-content;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    * {
+        text-align: center;
+        max-width: 70vw;
+    }
+}
+
+.sub {
+    &__img {
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+    background-image: var(--sub_background);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    }
+  }
+  .overlay {
+    h2 {
+        text-align: center;
+        @media (max-width: 800px) {
+            font-size: 1.2rem;
+        }
+    }
+  }
+}
+
+.last {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+    &__img {
+        width: 50%;
+        height: 70vh;
+        overflow: hidden;
+        background-image: var(--last_background);
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .overlay {
+            padding-left: 400px;
+            position: relative;
+            left: -300px;
+            h2 {
+                text-align: center;
+                @media (max-width: 800px) {
+                    font-size: 1.2rem;
+                }
+            }
+            @media (max-width: 1440px) {
+                padding-left: 200px;
+                left: -150px;
+            }
+            @media (max-width: 1024px) {
+                padding-left: 100px;
+                left: -100px;
+            }
+            @media (max-width: 400px) {
+                font-size: 1.2rem;
+            }
+        }
+        @media (max-width: 800px) {
+            width: 100%;
+            height: 50vh;
+        }
+    }
+    &__content {
+        * {
+            max-width: 40vw;
+            @media (max-width: 800px) {
+                max-width: 70vw;
+            }
+        }
+    }
+    @media (max-width: 800px) {
+        flex-direction: column;
+        gap: 0;
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "main": {
+        "picture": "",
+        "title": {
+            "h1": "",
+            "p": ""
+        },
+        "content": [
+        ]
+    },
+    "subcontent" : [
+        {
+            "picture": "",
+            "title": "Communication digitale",
+            "content": [
+                "Passionnée par la promotion des entreprises engagées dans des pratiques durables et respectueuses de l'environnement, je propose une gamme complète de services de communication digitale pour vous aider à mettre en avant votre engagement et à atteindre vos objectifs de communication.",
+                "Stratégie de communication digitale : Je travaillerai en étroite collaboration avec vous pour comprendre vos objectifs commerciaux et développer une stratégie de communication digitale sur mesure. Je vous aiderai à définir votre public cible, à identifier les canaux de communication appropriés et à créer des messages clés percutants.",
+                "Gestion des médias sociaux : Prise en charge la gestion complète de vos comptes de médias / réseaux sociaux. De la création de contenu engageant à la planification des publications et à l'interaction avec votre audience, je veillerai à ce que vos réseaux sociaux reflètent votre marque et suscitent l'intérêt de votre public.",
+                "Création de contenu : Convaincue que la création de contenu de qualité capte l'attention et engage les utilisateurs, je peux rédiger des articles, visuels, newsletters et d'autres types de contenu pour vous aider à communiquer efficacement avec votre public. En m'assurant que votre message est efficace, tout en mettant en avant vos initiatives et solutions pour un avenir plus durable.",
+                "Référencement (SEO) : Optimiser le contenu de votre site web améliore votre visibilité dans les résultats des moteurs de recherche. Cela permettra  d'attirer un public qualifié et intéressé par vos valeurs et vos produits.",
+                "Analyse, veille et suivi : En surveillant attentivement les performances de vos actions de communication digitale et celles de vos concurrents, je vous fournirai des rapports afin de vous tenir informé des performances en ligne votre entreprise."
+            ]
+        },
+        {
+            "picture": "",
+            "title": "Ressources Multimédia",
+            "content": [
+                "Vous souhaitez documenter une conférence, un salon professionnel, une exposition ou tout autre événement lié à l'activité de votre entreprise, je serai là pour saisir ces moments et créer du contenu visuel engageant.",
+                "Grâce à mes compétences en photographie et en vidéos, je suis en mesure de réaliser des prises de vue de qualité lors de vos événements, en mettant en avant vos produits et / ou services. Je veillerai à ce que les images et les vidéos reflètent vos valeurs et transmettent efficacement votre message.",
+                "Mon objectif est de capturer l'essence de vos produits et de vos événements tout en mettant en avant votre engagement.",
+                "Chaque entreprise est unique, c'est pourquoi je m'adapte à vos besoins spécifiques et propose des services personnalisés pour vous aider à obtenir les meilleurs résultats.",
+                "N'hésitez pas à me contacter pour discuter de vos objectifs de communication digitale et obtenir un devis personnalisé."
+            ]
+        }
+    ]
+}

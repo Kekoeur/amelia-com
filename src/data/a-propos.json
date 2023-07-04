@@ -1,0 +1,34 @@
+{
+    "main": {
+        "main_picture": "",
+        "main_title": {
+            "h1": "",
+            "p": ""
+        },
+        "main_content": [
+        ]
+    },
+    "subcontent" : [
+        {
+            "picture": "photo.png",
+            "title": "Qui suis-je ?",
+            "content": [
+                "À la suite d'une formation en sciences politiques, forte d'une expérience dans le domaine public, j'ai ressenti le besoin de m'investir professionnellement dans une aventure"
+            ]
+        },
+        {
+            "picture": "photo.png",
+            "title": "Pourquoi me spécialiser en communication éco-responsable ?",
+            "content": [
+                "La communication éco-responsable offre de multiples avantages : elle contribue à préserver l'environnement, renforce l'image de marque des entreprises, démontre leur responsabilité sociale et morale, tout en offrant aux entreprises qui proposent des solutions pour le bien de la planète et de la société une opportunité de se mettre en avant, tout en respectant leur éthique. C'est une approche bénéfique à la fois pour l'entreprise et pour la société dans son ensemble."
+            ]
+        },
+        {
+            "picture": "",
+            "title": "Ils nous ont fait confiance",
+            "content": [
+
+            ]
+        }
+    ]
+}

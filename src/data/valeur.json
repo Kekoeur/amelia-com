@@ -1,0 +1,31 @@
+{
+    "main": {
+        "main_picture": "",
+        "main_title": {
+            "h1": "",
+            "p": ""
+        },
+        "main_content": [
+        ]
+    },
+    "subcontent" : [
+        {
+            "picture": "photo.png",
+            "title": "Communication éco responsable",
+            "content": [
+                "Dans un contexte où la prise de conscience environnementale est de plus en plus forte, il devient impératif de repenser nos pratiques et de communiquer de manière responsable.",
+                "L'un des principaux enjeux de la communication éco-responsable est de sensibiliser le public aux problématiques environnementales. Les changements climatiques, la dégradation des écosystèmes, la pollution et l'épuisement des ressources naturelles sont autant de défis auxquels nous devons faire face."
+            ]
+        },
+        {
+            "picture": "photo.png",
+            "title": "Une solution face aux enjeux actuels",
+            "content": [
+                "La communication éco-responsable permet de diffuser des informations pertinentes, de sensibiliser le public à ces enjeux et de l'inciter à adopter des comportements plus durables.",
+                "Un autre enjeu majeur est celui de la crédibilité et de la confiance. Les consommateurs sont de plus en plus attentifs aux pratiques des entreprises et attendent une transparence totale. La communication éco-responsable permet de démontrer l'engagement réel d'une entreprise envers la durabilité, en fournissant des informations vérifiables et en établissant une relation de confiance avec les consommateurs.",
+                "La communication éco-responsable répond à la demande croissante des consommateurs en faveur de produits et services éthiques et durables. Les consommateurs sont de plus en plus conscients de l'impact de leurs choix sur l'environnement et la société, et ils recherchent des alternatives aux systèmes de grande distribution. Cette façon de communiquer permet de mettre en avant les produits et services éco-responsables, de répondre à cette demande et de créer une valeur ajoutée à vos services.",
+                "Cette méthode joue un rôle essentiel dans la transition vers une économie plus durable. Elle permet de valoriser les entreprises qui s'engagent dans des pratiques respectueuses de l'environnement et de la société, et encourage d'autres acteurs à suivre leur exemple."
+            ]
+        }
+    ]
+}

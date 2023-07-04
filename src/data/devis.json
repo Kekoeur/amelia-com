@@ -1,0 +1,32 @@
+{
+    "main": {
+        "main_picture": "",
+        "main_title": {
+            "h1": "",
+            "p": ""
+        },
+        "main_content": [
+        ]
+    },
+    "subcontent" : [
+        {
+            "picture": "photo.png",
+            "title": "Devis personnalisé",
+            "content": [
+                "Vous souhaitez mettre en place une communication éco-responsable et renforcer l'image de marque de votre entreprise ? Vous êtes au bon endroit !",
+                "En tant que chargée de communication spécialisée dans le domaine, je suis là pour vous aider à atteindre vos objectifs tout en respectant vos valeurs et en contribuant à un avenir plus durable.",
+                "Que vous cherchiez à promouvoir vos produits ou services éco-responsables, à sensibiliser votre public à vos initiatives durables ou à développer une stratégie de communication en accord avec votre engagement environnemental, je suis à votre disposition.",
+                "Chaque projet étant unique, je propose des services personnalisés adaptés à vos besoins spécifiques. Pour obtenir un devis détaillé, correspondant à vos attentes et à votre budget, veuillez me transmettre autant de détails que possible dans votre demande.",
+                "En travaillant ensemble, nous créerons une stratégie de communication éco-responsable sur mesure, mettant en valeur vos actions environnementales, renforçant votre image de marque et attirant l'attention de vos clients sensibles à ces enjeux.",
+                "Pour demander votre devis personnalisé, veuillez remplir le formulaire ci-dessous. Je m'engage à vous répondre dans les plus brefs délais afin de discuter de votre demande et de vous proposer une offre correspondant à vos besoins."
+            ]
+        },
+        {
+            "picture": "",
+            "title": "Formulaire",
+            "content": [
+                "texte pour le formulaire"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,30 @@
+{
+    "main": {
+        "picture": ["TCA03926.jpeg", "alt", "title"],
+        "title": {
+            "h1": "Le Nouën",
+            "p": "Une communication responsable pour un monde durable"
+        },
+        "content": [
+            "Ensemble, créons un impact positif et durable pour votre entreprise et notre planète.",
+            "Je vous aide à créer des messages clairs et convaincants pour sensibiliser vos clients et les inciter à faire des choix responsables.",
+            "Nous travaillerons ensemble pour élaborer une stratégie de communication personnalisée, adaptée à vos besoins spécifiques, afin de renforcer votre image de marque et de vous démarquer de vos concurrents."
+        ]
+    },
+    "sub" : {
+        "picture": ["TCA03991.jpeg", "alt", "title"],
+        "title": "Des aspirations clairs, en adéquation avec vos valeurs",
+        "content": [
+            "Mon objectif est de vous aider à promouvoir votre entreprise tout en contribuant à un avenir meilleur pour notre planète.",
+            "En travaillant ensemble, je vous aiderai à communiquer de manière transparente et engageante, en mettant en valeur votre engagement environnemental et social.",
+            "Que vous souhaitiez sensibiliser vos clients, promouvoir des produits éco-responsables ou renforcer votre image de marque durable, je suis là pour vous accompagner. Ensemble, nous développerons une stratégie de communication personnalisée, adaptée à vos besoins spécifiques."
+        ]
+    },
+    "last" : {
+        "picture": ["TCA03849.jpeg", "alt", "title"],
+        "title": "Échangeons !",
+        "content": [
+            "Je vous invite à explorer mon site pour en savoir plus sur mes services et mon approche de la communication éco-responsable. N'hésitez pas à me contacter pour discuter de vos objectifs et obtenir un devis personnalisé."
+        ]
+    }
+}
