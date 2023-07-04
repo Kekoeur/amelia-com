@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/amelia-com/static/css/main.58fa0312.css",
+    "main.css": "/amelia-com/static/css/main.5ecd6ad5.css",
     "main.js": "/amelia-com/static/js/main.c288fab7.js",
     "static/js/787.09a74ec8.chunk.js": "/amelia-com/static/js/787.09a74ec8.chunk.js",
     "index.html": "/amelia-com/index.html",
-    "main.58fa0312.css.map": "/amelia-com/static/css/main.58fa0312.css.map",
+    "main.5ecd6ad5.css.map": "/amelia-com/static/css/main.5ecd6ad5.css.map",
     "main.c288fab7.js.map": "/amelia-com/static/js/main.c288fab7.js.map",
     "787.09a74ec8.chunk.js.map": "/amelia-com/static/js/787.09a74ec8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.58fa0312.css",
+    "static/css/main.5ecd6ad5.css",
     "static/js/main.c288fab7.js"
   ]
 }
