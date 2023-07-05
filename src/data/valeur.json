@@ -8,9 +8,9 @@
         "main_content": [
         ]
     },
-    "subcontent" : [
+    "sub" : [
         {
-            "picture": "photo.png",
+            "picture": ["photo.jpg","alt","title"],
             "title": "Communication éco responsable",
             "content": [
                 "Dans un contexte où la prise de conscience environnementale est de plus en plus forte, il devient impératif de repenser nos pratiques et de communiquer de manière responsable.",
@@ -18,7 +18,7 @@
             ]
         },
         {
-            "picture": "photo.png",
+            "picture": ["photo.jpg","alt","title"],
             "title": "Une solution face aux enjeux actuels",
             "content": [
                 "La communication éco-responsable permet de diffuser des informations pertinentes, de sensibiliser le public à ces enjeux et de l'inciter à adopter des comportements plus durables.",

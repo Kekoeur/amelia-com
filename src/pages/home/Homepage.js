@@ -19,7 +19,7 @@ const Homepage = () => {
     <>
         <section className="main">
             <div className="main__img">
-                <img src={IMG_PATH+main.picture[0]} alt={main.picture[1]} title={main.picture[1]} />
+                <img src={IMG_PATH+main.picture[0]} alt={main.picture[1]} title={main.picture[2]} />
                 <div className="overlay">
                     <h1>{main.title.h1}</h1>
                     <h2>{main.title.p}</h2>
@@ -33,7 +33,7 @@ const Homepage = () => {
         </section>
         <section className="sub">
             <div className="sub__img">
-            <img src={IMG_PATH+sub.picture[0]} alt={sub.picture[1]} title={sub.picture[1]} />
+            <img src={IMG_PATH+sub.picture[0]} alt={sub.picture[1]} title={sub.picture[2]} />
                 <div className="overlay">
                     <h2>{sub.title}</h2>
                 </div>

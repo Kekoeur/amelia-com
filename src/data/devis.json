@@ -8,9 +8,9 @@
         "main_content": [
         ]
     },
-    "subcontent" : [
+    "sub" : [
         {
-            "picture": "photo.png",
+            "picture": ["photo.jpg","alt","title"],
             "title": "Devis personnalisé",
             "content": [
                 "Vous souhaitez mettre en place une communication éco-responsable et renforcer l'image de marque de votre entreprise ? Vous êtes au bon endroit !",
@@ -22,7 +22,7 @@
             ]
         },
         {
-            "picture": "",
+            "picture": ["photo.jpg","alt","title"],
             "title": "Formulaire",
             "content": [
                 "texte pour le formulaire"

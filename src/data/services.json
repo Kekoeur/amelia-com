@@ -8,9 +8,9 @@
         "content": [
         ]
     },
-    "subcontent" : [
+    "sub" : [
         {
-            "picture": "",
+            "picture": ["photo.jpg","alt","title"],
             "title": "Communication digitale",
             "content": [
                 "Passionnée par la promotion des entreprises engagées dans des pratiques durables et respectueuses de l'environnement, je propose une gamme complète de services de communication digitale pour vous aider à mettre en avant votre engagement et à atteindre vos objectifs de communication.",
@@ -22,7 +22,7 @@
             ]
         },
         {
-            "picture": "",
+            "picture": ["photo.jpg","alt","title"],
             "title": "Ressources Multimédia",
             "content": [
                 "Vous souhaitez documenter une conférence, un salon professionnel, une exposition ou tout autre événement lié à l'activité de votre entreprise, je serai là pour saisir ces moments et créer du contenu visuel engageant.",
