@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import EMAILJS_USER_ID from '../config/email.config';
 
-const FormDevis = (f) => {
+const FormContact = (f) => {
   emailjs.init(EMAILJS_USER_ID);
 
   const [lastName, setLastName] = useState('');
@@ -11,7 +11,7 @@ const FormDevis = (f) => {
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
   const [site, setSite] = useState('');
-  const [projet, setProjet] = useState('');
+  const [message, setMessage] = useState('');
 
   const [error, setError] = useState('');
 
@@ -40,8 +40,8 @@ const FormDevis = (f) => {
   const handleSiteChange = (e) => {
     setSite(e.target.value);
   };
-  const handleProjetChange = (e) => {
-    setProjet(e.target.value);
+  const handleMessageChange = (e) => {
+    setMessage(e.target.value);
   };
 
   const handleSubmit = async (e) => {
@@ -71,7 +71,7 @@ const FormDevis = (f) => {
         setPhone('');
         setEmail('');
         setSite('');
-        setProjet('');
+        setMessage('');
 
         // Affichage d'un message de succès
         alert('Votre message a été envoyé avec succès !');
@@ -104,7 +104,7 @@ const FormDevis = (f) => {
           <input placeholder="Url du site" type="url" id="site" value={site} onChange={handleSiteChange} />
         </div>
         <div>
-          <input placeholder="Projet" type="textarea" id="projet" value={projet} onChange={handleProjetChange} />
+          <input placeholder="Message" type="textarea" id="message" value={message} onChange={handleMessageChange} />
         </div>
         <div>
             <p className='error_signup'>{error}</p>
@@ -115,4 +115,4 @@ const FormDevis = (f) => {
   );
 };
 
-export default FormDevis;
+export default FormContact;

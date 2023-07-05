@@ -8,7 +8,7 @@
         "main_content": [
         ]
     },
-    "subcontent" : [
+    "sub" : [
         {
             "picture": ["photo.jpg","alt","title"],
             "title": "Qui suis-je ?",
@@ -24,7 +24,7 @@
             ]
         },
         {
-            "picture": "",
+            "picture": ["photo.jpg","alt","title"],
             "title": "Ils nous ont fait confiance",
             "content": [
 

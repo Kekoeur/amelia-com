@@ -8,9 +8,9 @@
         "main_content": [
         ]
     },
-    "subcontent" : [
+    "sub" : [
         {
-            "picture": "",
+            "picture": ["photo.jpg","alt","title"],
             "title": "Contactez-moi",
             "content": [
                 "texte formulaire contact"
