@@ -59,11 +59,7 @@ const Divider = () => {
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setTriangleStyle(-100);
-        } else {
-          setTriangleStyle(0);
-        }
+        calculateTrianglePosition();
       });
     });
 

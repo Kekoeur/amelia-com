@@ -53,7 +53,7 @@ const ArticleOne = ({revert}) => {
     let percent = distance / windowHeight * 100;
     if(percent > 100) percent = 100;
   
-    let triangleStyle = 25 - percent/2;
+    let triangleStyle = 25 - percent;
     if(triangleStyle < 0) triangleStyle = 0;
     setTriangleStyle(triangleStyle);
     console.log(triangleStyle)
