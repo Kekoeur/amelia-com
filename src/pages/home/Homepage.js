@@ -2,6 +2,8 @@ import home_data from "../../data/home.json"
 
 import Divider from "../../components/Divider";
 import Title from "../../components/Title";
+import ArticleOne from "../../components/Article/ArticleOne";
+import FooterImg from "../../components/FooterImg";
 
 import "./Homepage.scss"
 
@@ -20,8 +22,11 @@ const Homepage = () => {
     <>
         <Title></Title>
         <Divider></Divider>
+        <ArticleOne></ArticleOne>
         <Divider></Divider>
+        <ArticleOne revert="true"></ArticleOne>
         <Divider></Divider>
+        <FooterImg></FooterImg>
     </>
     )
 }
