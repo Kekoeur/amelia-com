@@ -50,10 +50,10 @@ const ArticleOne = ({revert}) => {
     //const distanceFromVisible = Math.abs(windowScrollPosition + windowHeight - sectionBottom);
     const distance = sectionTop + sectionHeight - windowScrollPosition - windowHeight;
     //let percent = (distanceFromVisibleCenter / (windowHeight / 2)) * 100;
-    let percent = distance / windowHeight * 100;
+    let percent = distance / sectionHeight * 100;
     if(percent > 100) percent = 100;
   
-    let triangleStyle = 25 - percent;
+    let triangleStyle = 150 - percent;
     if(triangleStyle < 0) triangleStyle = 0;
     setTriangleStyle(triangleStyle);
     console.log(triangleStyle)

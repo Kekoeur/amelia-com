@@ -181,7 +181,7 @@
         align-items: center;
         gap: 5rem;
         @media screen and (max-width: 768px) {
-           flex-direction: column;
+           flex-direction: column !important;
            gap: 3rem;
         }
         &__image {
@@ -200,8 +200,8 @@
                 top: -10%;
                 width: 20vw;
                 height: auto;
-                max-width: 150px;
-                max-height: 150px;
+                max-width: 100px;
+                max-height: 100px;
             }
         }
         &__content {
