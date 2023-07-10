@@ -1,0 +1,348 @@
+// THIS FILE IS FOR EASY SET UP ON NEW PROJECTS BASED OFF OF THE STYLE GUIDE
+
+//    ######  ######## ########         ##     ## ########  
+//   ##    ## ##          ##            ##     ## ##     ## 
+//   ##       ##          ##            ##     ## ##     ## 
+//    ######  ######      ##    ####### ##     ## ########  
+//         ## ##          ##            ##     ## ##        
+//   ##    ## ##          ##            ##     ## ##        
+//    ######  ########    ##             #######  ##        
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+// CHANGE WITH CAUTION //////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+$svg-path: () !default;
+
+// CALCULATE CONTAINER VALUES FOR MIXINS
+$row_ratio: null;
+$row_max_width: null;
+$row_min_width: null;
+$row_width: null;
+$row_maxed: null;
+
+$min: 320;
+$container-max: 1320;
+$max: 1600;
+$column-gap: 20;
+
+$row_max_width: $container-max;
+$row_min_width: $min - ($column-gap * 2);
+$row_width: calc($row_min_width / $min);
+$row_ratio: $row_width * 100;
+
+$i: $container-max;
+$row_maxed: 0;
+$row_maxed: $i - 1;
+$largest: $i * 1px;
+
+// Add Units to these variables.
+$row_max_width: $row_max_width * 1px;
+$row_min_width: $row_min_width * 1px;
+$row_width: $row_width * 100%;
+$row_maxed: $row_maxed * 1px;
+
+// fonts
+$sans: sans-serif !default;
+$sans-alt: monospace !default;
+$serif: serif !default;
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+//  ######  ########     ###     ######  #### ##    ##  ######   
+// ##    ## ##     ##   ## ##   ##    ##  ##  ###   ## ##    ##  
+// ##       ##     ##  ##   ##  ##        ##  ####  ## ##        
+//  ######  ########  ##     ## ##        ##  ## ## ## ##   #### 
+//       ## ##        ######### ##        ##  ##  #### ##    ##  
+// ##    ## ##        ##     ## ##    ##  ##  ##   ### ##    ##  
+//  ######  ##        ##     ##  ######  #### ##    ##  ######   
+
+
+// CALCULATIONS FOR .PAD
+// The "clamp" number is calculated by dividing your largest padding number by your optimal screen width
+// i.e 200px/1200px = 0.166 * 100 = 16.6vw
+$paddingMin: 80px; //pad mobile
+$paddingMax: 120px; //pad desktop
+$paddingClamp: 10vw; //scaling between
+
+$paddingMdMin: 50px; //pad-medium mobile
+$paddingMdMax: 70px; //pad-medium desktop
+$paddingMdClamp: 7vw; //pad-medium scaling
+
+$paddingSmMin: 30px; //pad-small mobile
+$paddingSmMax: 50px; //pad-small desktop
+$paddingSmClamp: 5vw; //pad-small scaling
+$nav-height: 188px;
+
+// STANDARD BREAKPOINTS FOR BREAK MIXIN
+$smallest : 320px !default; //DO NOT CHANGE!
+$small: 480px !default;
+$small-medium: 640px !default;
+$medium: 768px !default;
+$large: 960px !default;
+$larger: 1200px !default;
+$fourk: 1850px !default;
+
+
+//  ######   #######  ##        #######  ########   ######  
+// ##    ## ##     ## ##       ##     ## ##     ## ##    ## 
+// ##       ##     ## ##       ##     ## ##     ## ##       
+// ##       ##     ## ##       ##     ## ########   ######  
+// ##       ##     ## ##       ##     ## ##   ##         ## 
+// ##    ## ##     ## ##       ##     ## ##    ##  ##    ## 
+//  ######   #######  ########  #######  ##     ##  ######  
+
+$black: #000;
+$black-20: rgba( 0,0,0,0.2);
+$white: #FFF;
+$off-white: #FFE5CD;
+$off-white-50: #C3BEB1;
+$beige: #F9F4E8;
+$blue-10: #E6EFF2;
+$blue: #107FB0;
+$blue-50: #89D4ED;
+$blue-60: #60CAE9;
+$blue-70: #1098D5;
+$blue-80: #107eb0;
+$blue-90: #0E709A;
+$red: #FA5734;
+$yellow-80: #FFF4D1;
+$yellow-50: #F3D46D;
+$green-50: #809945;
+$green-70: #6F7F36;
+$green-80: #667632;
+$green: #52D590;
+$pink: #ED93EF;
+$purple: #876FCA;
+$brown: #6D4335;
+$placeholder-color: #cecece;
+
+//  ######   #######  ##     ## ##     ##  #######  ##    ## 
+// ##    ## ##     ## ###   ### ###   ### ##     ## ###   ## 
+// ##       ##     ## #### #### #### #### ##     ## ####  ## 
+// ##       ##     ## ## ### ## ## ### ## ##     ## ## ## ## 
+// ##       ##     ## ##     ## ##     ## ##     ## ##  #### 
+// ##    ## ##     ## ##     ## ##     ## ##     ## ##   ### 
+//  ######   #######  ##     ## ##     ##  #######  ##    ## 
+
+html {
+  scroll-behavior: smooth;
+  min-height: 100vh;
+
+  *::selection {
+    background: $blue-80;
+    color: $white;
+  }
+}
+
+.container {
+  display: block;
+  max-width: $row_max_width;
+  min-width: $row_min_width;
+  width: 100%;
+  padding: 0 1rem;
+
+  @media screen and (min-width: $small) {
+    width: $row_width;
+    margin: auto;
+    padding: 0;
+  }
+  
+  &:not( .contain ){
+    @media screen and ( min-width: $fourk ) {
+      max-width: 1920px;
+    }
+  }
+}
+
+//button stuff
+@mixin borderHoverTrans {
+  &:hover {
+    border: 1px solid transparent;
+  }
+}
+
+@mixin hoverFill ( $a, $b) {
+  &:hover {
+    background-color: $a;
+    border: 1px solid $a;
+    color: $b;
+
+    svg path { stroke: $b; }
+  }
+}
+
+@mixin buttonInfo {
+  display: inline-block;
+  background-color: transparent;
+  padding: .625rem 1.25rem;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: .25s;
+  width: 100%;
+  @media screen and ( min-width: $small ) { width: auto; }
+}
+
+.button {
+  @include buttonInfo();
+  @include hoverFill( $blue-80, $white );
+  border: 1px solid $black;
+  background-color: transparent;
+  color: $black;
+  border-radius: 91px;
+
+  &.active {
+    background-color: $blue-80;
+    border: 1px solid $blue-80;
+    color: $white;
+
+    svg path { stroke: $white; }
+  }
+
+  &.light {
+    @include hoverFill( $white, $black );
+    border: 1px solid $white;
+    color: $white;
+    background-color: transparent;
+  }
+  &-blue {
+    @include hoverFill( $blue, $white );
+    border: 1px solid $white;
+    color: $white;
+    background-color: $blue;
+  }
+
+  &-arrow {
+    @include hoverFill( $blue-80, $white );
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $black;
+    background-color: transparent;
+    padding: .625rem 1rem;
+    border-radius: 91px;
+    width: fit-content;
+    transition: .25s;
+
+    &.light {
+      @include hoverFill( $white, $black );
+      border: 1px solid $white;
+      background-color: transparent;
+
+      svg path { stroke: $white; }
+    }
+  }
+  &.showhome {
+    width: fit-content;
+    text-transform: none;
+    &.blue {
+      @include hoverFill( $blue, $white );
+      border: 1px solid $blue;
+      background-color: $white;
+    }
+  }
+}
+
+.mr-1 { margin-right: 1rem; }
+.mr-half { margin-right: 0.5rem; }
+.gap-1 { gap: 1rem; }
+.relative { position: relative; }
+.overflow-hidden { overflow: hidden; }
+.prev-arrow { transform: rotate( 180deg ); }
+
+.flex {
+  display: flex;
+
+  &-column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-center-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  &-aligned {
+    display: flex;
+    align-items: center;
+  }
+
+  &-justify {
+    display: flex;
+    justify-content: center;
+  }
+
+  &-btwn {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-start {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  &-end {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &-baseline { align-items: baseline; }
+  &-wrap { flex-wrap: wrap; }
+  &-self { align-self: center; }
+}
+
+.text {
+  &-white{ color: $white; }
+  &-black{ color: $black; }
+  &-blue { color: $blue-80; }
+  &-green { color: $green; }
+  &-army { color: $green-80; }
+  &-yellow { color: $yellow-50; }
+  &-red { color: $red; }
+  &-pink { color: $pink; }
+  &-aqua { color: $blue-50; }
+  &-purple { color : $purple; }
+  &-brown { color: $brown; }
+}
+
+.bg {
+  &-white { background-color: $white; }
+  &-black { background-color: $black; }
+  &-blue-10 { background-color: $blue-10; }
+  &-blue-50 { background-color: $blue-50; }
+  &-beige { background-color: $beige; }
+}
+
+.fill {
+  &-white svg path { fill: $white; }
+  &-black svg path { fill: $black; }
+  &-blue svg path { fill: $blue-80; }
+  &-green svg path { fill: $green; }
+  &-army svg path { fill: $green-50; }
+  &-yellow svg path { fill: $yellow-50; }
+  &-red svg path { fill: $red; }
+  &-pink svg path { fill: $pink; }
+  &-aqua svg path { fill: $blue-50; }
+  &-purple svg path { fill : $purple; }
+  &-brown svg path { fill: $brown; }
+}
+
+.hide { display: none; }

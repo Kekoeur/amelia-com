@@ -2,9 +2,12 @@ import React, { useState, useEffect, useRef } from 'react';
 import 'whatwg-fetch';
 import { Link } from 'react-router-dom';
 
+
 import Main from './pages/Main';
 
 import './App.scss';
+
+export const IMG_PATH = process.env.PUBLIC_URL + "/assets/";
 
 function App() {
 
