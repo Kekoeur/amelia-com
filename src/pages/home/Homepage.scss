@@ -10,7 +10,7 @@
         height: 80vh;
         width: 80vw;
         @media screen and (max-width: 768px) {
-            width: 100vw;
+            width: 100%
         }
         img{
             width: 100%;
@@ -169,7 +169,7 @@
 }
 .section-article {
     margin: auto;
-    padding: 0;
+    padding-top: 30px;
     width: 87.5%;
     .article {
         margin: auto;
@@ -189,20 +189,37 @@
             width: 50%;
             @media screen and (max-width: 768px) {
                 aspect-ratio: 4/3;
-                width: 100%;
+                width: 90%;
             }
-            img {
+            .img {
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 170%;
                 width: 100%;
                 height: 100%;
+                @media screen and (max-width: 768px) {
+                    background-size: 130%;
+                }
             }
-            .left-tri {
-                position: absolute;
-                top: -10%;
-                width: 20vw;
-                height: auto;
-                max-width: 100px;
-                max-height: 100px;
+            .box {
+                position: relative;
+                z-index: 10;
+                width: 48vw;
+                display: flex;
+                flex-direction: row-reverse;
+                @media screen and (max-width: 768px) {
+                    width: 86vw;
+                }
+                .left-tri, .bottom-tri {
+                    position: absolute;
+                    width: 10vw;
+                    height: auto;
+                    @media screen and (max-width: 768px) {
+                        width: 20vw;
+                    }
+                }
             }
+            
         }
         &__content {
             width: 50%;
@@ -213,9 +230,41 @@
     }
     .revert {
         flex-direction: row-reverse;
+        .box {
+            display: flex;
+            flex-direction: row;
+            left: -5vw;
+            @media screen and (max-width: 768px) {
+                left: -9vw;;
+            }
+            .left-tri {
+                transform: rotate(0deg) !important;
+            }
+        }
     }
 }
-
+.section-article {
+    .article-two {
+        .box {
+            width: 100%;
+            left: 0;
+            .left-tri {
+                right: -10vw;
+            }
+        }
+    }
+    .article-two.revert {
+        .box {
+            .bottom-tri {
+                transform: rotate(90deg);
+            }
+            .left-tri {
+                transform: rotate(0deg) !important;
+                left: -10vw;
+            }
+        }
+    }
+}
 
 @keyframes slideBar {
     0% {

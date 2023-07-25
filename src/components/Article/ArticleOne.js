@@ -4,91 +4,71 @@ import { IMG_PATH } from "../../App";
 
 import TriangleLeft from "../svg/TriangleLeft";
 
-const ArticleOne = ({revert}) => {
-  const [scrollPosition, setScrollPosition] = useState(0);
-  const [triangleStyle, setTriangleStyle] = useState(0);
-  const sectionRef = useRef(null);
+import anime from 'animejs/lib/anime.es.js';
 
-  const articleClasses = `article${revert ? ' revert' : ''}`;
+const ArticleOne = ({ revert }) => {
+  const articleClasses = `article article-one${revert ? ' revert' : ''}`;
 
   useEffect(() => {
-    const handleScroll = () => {
-      const currentPosition = window.scrollY;
-      setScrollPosition(currentPosition);
-      calculateTrianglePosition(currentPosition);
+    const parallaxElements = document.querySelectorAll("[data-parallax]");
+    
+    const parallaxSetup = (element, animetl) => {
+      const bound = element.getBoundingClientRect();
+      const wHeight = window.innerHeight;
+      if (bound.top < wHeight && bound.bottom > 0) {
+        animetl.seek(animetl.duration * ((wHeight - bound.top) / (wHeight + bound.height)).toFixed(3));
+      } else {
+        if (bound.top >= wHeight) {
+          animetl.seek(0);
+        } else if (bound.bottom <= 0) {
+          animetl.seek(animetl.duration);
+        }
+      }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    parallaxElements.forEach(element => {
+      const animetl = anime.timeline({ autoplay: false });
+      const properties = {
+        targets: element,
+        easing: "linear",
+      };
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+      const parallaxData = element.getAttribute("data-parallax");
+      const parallaxOptions = JSON.parse(parallaxData.replace(/'/g, "\""));
 
-  useEffect(() => {
-    const handleResize = () => {
-      calculateTrianglePosition(scrollPosition);
-    };
+      Object.assign(properties, parallaxOptions);
+      animetl.add(properties);
 
-    window.addEventListener("resize", handleResize);
+      const parallaxScrollTarget = element.getAttribute("parallax-scroll") || window;
+      parallaxScrollTarget.addEventListener("resize", () => parallaxSetup(element, animetl));
+      parallaxScrollTarget.addEventListener("scroll", () => parallaxSetup(element, animetl));
 
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, [scrollPosition]);
-
-  const calculateTrianglePosition = () => {
-    const sectionElement = sectionRef.current;
-    const sectionTop = sectionElement.offsetTop;
-    const sectionHeight = sectionElement.offsetHeight;
-    const windowHeight = window.innerHeight;
-    const windowScrollPosition = window.scrollY;
-  
-    //const sectionMiddle = sectionTop + sectionHeight / 2
-    //const sectionBottom = sectionTop + sectionHeight;
-    //const distanceFromVisibleCenter = Math.abs(windowScrollPosition + windowHeight / 2 - sectionMiddle);
-    //const distanceFromVisible = Math.abs(windowScrollPosition + windowHeight - sectionBottom);
-    const distance = sectionTop + sectionHeight - windowScrollPosition - windowHeight;
-    //let percent = (distanceFromVisibleCenter / (windowHeight / 2)) * 100;
-    let percent = distance / sectionHeight * 100;
-    if(percent > 100) percent = 100;
-  
-    let triangleStyle = 150 - percent;
-    if(triangleStyle < 0) triangleStyle = 0;
-    setTriangleStyle(triangleStyle);
-    console.log(triangleStyle)
-  };
-
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        calculateTrianglePosition();
-      });
+      setTimeout(() => parallaxSetup(element, animetl), 50);
     });
+  }, [revert]);
 
-    observer.observe(sectionRef.current);
-
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
-  
   return (
-    <section className="section-article" ref={sectionRef}>
-        <article className={articleClasses}>
-          <div className="article__image">
-              <img src={IMG_PATH + "photo.jpg"} alt="alt" title="title" />
-              <TriangleLeft style={{x:-80, y:triangleStyle}} />
+    <section className="section-article">
+      <article className={articleClasses}>
+        <div className="article__image">
+          <div className="img" style={{backgroundImage: `url(${IMG_PATH}TCA03849.jpeg)`}} aria-label="image description" data-parallax='{
+            "background-position-y": ["-80px","20px"]
+          }'></div>
+          <div className="box" data-parallax='{
+            "top": ["-70%","-120%"]
+          }'>
+            <TriangleLeft />
           </div>
-          <div className="article__content container contained">
-              <h1 className="title">
-              Petit titre de n'importe quel taille on s'en fou donc on peut tester avec du long
-              </h1>
-              <p className="sub_title">
-              Texte de l'article donc tres long si beosin. Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe exercitationem a pariatur vitae, quasi cumque quam omnis enim earum? Accusamus quam sapiente tempore ratione ducimus distinctio dolor rerum architecto ipsa earum! Sint dolorum consequatur, rerum vel possimus consectetur officia. Quo, quis! Numquam nihil facere iste ipsam vel aliquam, commodi tempora neque? Sunt distinctio saepe autem voluptate non delectus dolorem maiores provident quos nihil exercitationem quibusdam assumenda fuga quis quas voluptatum illum consectetur error, reiciendis laboriosam enim. Nisi obcaecati sit atque accusantium veritatis sed voluptas ullam, maiores accusamus a explicabo iure beatae esse saepe corrupti expedita modi provident illo repudiandae. Quaerat.
-              </p>
-          </div>
-        </article>
+        </div>
+        <div className="article__content container contained">
+          <h1 className="title">
+            Petit titre de n'importe quel taille on s'en fou donc on peut tester avec du long
+          </h1>
+          <p className="sub_title">
+            Texte de l'article donc tres long si beosin. Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe exercitationem a pariatur vitae, quasi cumque quam omnis enim earum? Accusamus quam sapiente tempore ratione ducimus distinctio dolor rerum architecto ipsa earum! Sint dolorum consequatur, rerum vel possimus consectetur officia. Quo, quis! Numquam nihil facere iste ipsam vel aliquam, commodi tempora neque? Sunt distinctio saepe autem voluptate non delectus dolorem maiores provident quos nihil exercitationem quibusdam assumenda fuga quis quas voluptatum illum consectetur error, reiciendis laboriosam enim. Nisi obcaecati sit atque accusantium veritatis sed voluptas ullam, maiores accusamus a explicabo iure beatae esse saepe corrupti expedita modi provident illo repudiandae. Quaerat.
+          </p>
+        </div>
+      </article>
     </section>
   );
 };

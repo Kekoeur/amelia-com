@@ -3,6 +3,7 @@ import home_data from "../../data/home.json"
 import Divider from "../../components/Divider";
 import Title from "../../components/Title";
 import ArticleOne from "../../components/Article/ArticleOne";
+import ArticleTwo from "../../components/Article/ArticleTwo";
 import FooterImg from "../../components/FooterImg";
 
 import "./Homepage.scss"
@@ -23,8 +24,10 @@ const Homepage = () => {
         <Title></Title>
         <Divider></Divider>
         <ArticleOne></ArticleOne>
+        <ArticleTwo revert="true"></ArticleTwo>
         <Divider></Divider>
         <ArticleOne revert="true"></ArticleOne>
+        <ArticleTwo></ArticleTwo>
         <Divider></Divider>
         <FooterImg></FooterImg>
     </>
