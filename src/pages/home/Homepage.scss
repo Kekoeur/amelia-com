@@ -250,6 +250,9 @@
             left: 0;
             .left-tri {
                 right: -10vw;
+                @media screen and (max-width: 768px) {
+                    right: -20vw;;
+                }
             }
         }
     }
@@ -261,6 +264,9 @@
             .left-tri {
                 transform: rotate(0deg) !important;
                 left: -10vw;
+                @media screen and (max-width: 768px) {
+                    left: -20vw;;
+                }
             }
         }
     }

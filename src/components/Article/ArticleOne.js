@@ -52,7 +52,7 @@ const ArticleOne = ({ revert }) => {
       <article className={articleClasses}>
         <div className="article__image">
           <div className="img" style={{backgroundImage: `url(${IMG_PATH}TCA03849.jpeg)`}} aria-label="image description" data-parallax='{
-            "background-position-y": ["-80px","20px"]
+            "background-position-y": ["-60px","20px"]
           }'></div>
           <div className="box" data-parallax='{
             "top": ["-70%","-120%"]
