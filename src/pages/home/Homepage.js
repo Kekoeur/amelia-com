@@ -1,5 +1,6 @@
-import home_data from "../../data/home.json"
+import data from "../../data/data.json"
 
+import Section from "../../components/Section/Section";
 import Divider from "../../components/Divider";
 import Title from "../../components/Title";
 import ArticleOne from "../../components/Article/ArticleOne";
@@ -10,10 +11,6 @@ import "./Homepage.scss"
 
 const Homepage = () => {
 
-    const main = home_data.main;
-    const sub = home_data.sub;
-    const last = home_data.last;
-
     /*        {main && <Article data={main}></Article>}
         {Object.keys(sub).map((elt) => (
             <Article data={sub[elt]}></Article>
@@ -21,7 +18,8 @@ const Homepage = () => {
     */
     return ( 
     <>
-        <Title></Title>
+        <Title data={data.heading}></Title>
+        <Section data={data["section-one"]}></Section>
         <Divider></Divider>
         <ArticleOne></ArticleOne>
         <ArticleTwo revert="true"></ArticleTwo>

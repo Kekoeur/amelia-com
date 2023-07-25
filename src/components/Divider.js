@@ -78,7 +78,7 @@ const Divider = () => {
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda tempore qui molestiae voluptates! Molestias
           delectus quis, veniam molestiae veritatis nostrum ab.
         </p>
-        <TriangleTop style={triangleStyle} />
+        <TriangleTop style={{style: triangleStyle, fill:"#89D4ED", stroke:"none", classname:"top-tri"}}/>
         <TriangleBottom style={-100 -triangleStyle} />
       </div>
     </section>
